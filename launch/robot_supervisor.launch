@@ -1,0 +1,6 @@
+<launch>
+ <arg name = "robot_ns" default = "robot0" />
+ <group ns = "$(arg robot_ns)"> 
+  <node name = "subscriber_node" type = "subscriber_node" pkg = "robot_no_crash"/>
+  </group>
+</launch>
