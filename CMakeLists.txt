@@ -135,10 +135,7 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/robot_no_crash_node.cpp)
-add_executable(lab4_subscriber_node src/lab4_subscriber.cpp)
-add_executable(lab4_publisher_node src/lab4_publisher.cpp)
-add_executable(lab4_parameter_node src/lab4_parameter.cpp)
-add_executable(lab4_keep_from_wall_node src/lab4_keep_from_wall.cpp)
+add_executable(robot_no_crash_node src/driver.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -151,14 +148,9 @@ add_executable(lab4_keep_from_wall_node src/lab4_keep_from_wall.cpp)
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(${PROJECT_NAME}_node
-#   ${catkin_LIBRARIES}
-# )
-
-target_link_libraries(lab4_publisher_node ${catkin_LIBRARIES})
-target_link_libraries(lab4_subscriber_node ${catkin_LIBRARIES})
-target_link_libraries(lab4_parameter_node ${catkin_LIBRARIES})
-target_link_libraries(lab4_keep_from_wall_node ${catkin_LIBRARIES})
+ target_link_libraries(robot_no_crash_node
+   ${catkin_LIBRARIES}
+ )
 
 #############
 ## Install ##

@@ -2,6 +2,6 @@
  <param name = "robot0/wall_dist" value = "0.5" type = "double" />
  <include file = "$(find robot_no_crash)/launch/robot_supervisor.launch" />
  <remap from = "laser_1" to="laser_0" />
- <include file = "$(find stdr_launchers)/launch/server_with_map_and_gui.launch" />
+ <include file = "$(find stdr_launchers)/launch/server_with_map_and_gui_plus_robot.launch" />
  <node name = "rqt_gui" pkg = "rqt_gui" type = "rqt_gui" />		
 </launch>
