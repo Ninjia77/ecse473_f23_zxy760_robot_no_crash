@@ -67,6 +67,8 @@ int main(int argc, char** argv)
     {
         if (nh.getParamCached(param_name, wall_dist)) 
 	        ROS_INFO("wall_dist was updated to: [%2.2f]", wall_dist);
+        else 
+            ROS_ERROR("Failed to get param 'wall_dist.'");
 	    ROS_INFO_ONCE("wall_dist is now: [%2.2f]", wall_dist);
         ros::spinOnce();
         ros::spin();
